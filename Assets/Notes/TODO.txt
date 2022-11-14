@@ -1,0 +1,15 @@
+X intermediate crosshair
+- hide the cursor for mouse version
+- distance based throw? golf like thing?
+- time up doesn't kill last ball that's been thrown
+- maybe a risky sprint, harder to control - the more you hold the button the faster you go, no terminal velocity, but lose some control somehow, have to let up at the right time to catch the ball
+- three colliders for the three colors
+- angled shots get larger colliders
+- (powerup) R/L button curve your shot
+- show where the next goal is going to show up??
+- (visual) goals become batters that hit homeruns
+- greg wants to know where the ball is going to land even sooner
+X instead of target large circle, ball will fall in a random point within that circle
+- never give you an impossible ball
+
+
