@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{41CC6DD5-8265-1FB2-F3DC-870F96995978}</ProjectGuid>
+    <ProjectGuid>{C103B809-3149-07DA-5A12-5F1361A070B4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.ProBuilder</AssemblyName>
@@ -758,11 +758,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.ProBuilder.Poly2Tri.csproj">
-      <Project>{BEF8DD5A-EE54-9A58-E245-4B505C82F1EF}</Project>
+      <Project>{204544E6-1E70-033F-74E9-74986824476D}</Project>
       <Name>Unity.ProBuilder.Poly2Tri</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.KdTree.csproj">
-      <Project>{E971A398-43B8-E3FD-5DCA-FE9ECB18F346}</Project>
+      <Project>{048BF208-6F7A-4339-6910-7B6663723EAB}</Project>
       <Name>Unity.ProBuilder.KdTree</Name>
     </ProjectReference>
   </ItemGroup>

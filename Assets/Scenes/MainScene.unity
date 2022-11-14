@@ -426,8 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballFlyingPrefab: {fileID: 653777045368896137, guid: 79c99ba490586bd469022ac28cfdd0eb, type: 3}
-  points: 0
-  gameTimerMax: 60
+  gameTimerMax: 99
   gameObjectsToDeleteWhenTimerEnds:
   - {fileID: 1018894998}
   - {fileID: 2143405263}
@@ -548,6 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373bfde6d2dfd7c498627a24e5adfe81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moving: 1
   myColor: 1
 --- !u!65 &294022994
 BoxCollider:
@@ -1394,6 +1394,7 @@ MonoBehaviour:
   diveVerticalMovementTimer: 0
   diveRotationTimer: 0
   diveRotationTimerMax: 0.75
+  boxColliderSize: 5
   dashTrailPrefab: {fileID: 8914812686123626429, guid: ea434d9659b580445ac6e70bdcb9e721, type: 3}
   ballThrownPrefab: {fileID: 6962380613824218149, guid: 27773c5d3901096458f1ca8813dd4f58, type: 3}
   ballFlyingPrefab: {fileID: 653777045368896137, guid: 79c99ba490586bd469022ac28cfdd0eb, type: 3}
@@ -1438,7 +1439,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 3, z: 3}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1058815335
 GameObject:
@@ -1713,6 +1714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373bfde6d2dfd7c498627a24e5adfe81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moving: 1
   myColor: 2
 --- !u!65 &1130718588
 BoxCollider:
@@ -2839,6 +2841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373bfde6d2dfd7c498627a24e5adfe81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moving: 1
   myColor: 0
 --- !u!65 &2143405265
 BoxCollider:

@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject ballFlyingPrefab;
-    public int points;
+    [SerializeField] private GameObject ballFlyingPrefab;
+    private int points;
     private float gameTimer;
     [SerializeField] private float gameTimerMax;
     private bool gameOver;
@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public bool GameOver => gameOver;
+    public void AddPoints(int pointsToAdd) => points += pointsToAdd;
 
     private void Awake() {
         //singleton logic
@@ -34,7 +35,6 @@ public class GameManager : MonoBehaviour
     {
         Instantiate(ballFlyingPrefab);
         gameTimer = gameTimerMax;
-        Utilities.GetWeatherInfo(53.6f, -7.4f);
     }
 
     void Update()
@@ -60,6 +60,4 @@ public class GameManager : MonoBehaviour
         pointsText.text = points.ToString();
         timerText.text = gameTimerInt.ToString();
     }
-
-    public void AddPoint() => points++;
 }

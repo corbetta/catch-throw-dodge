@@ -5,7 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float speed, dashMultiplier, dashTimerMax, dashTimer, dashTrailTimerMax, dashTrailTimer, 
-        diveMultiplier, diveDescel, diveTimerMax, diveTimer, diveTrailTimerMax, diveTrailTimer, diveVerticalMovementTimer, diveRotationTimer, diveRotationTimerMax;
+        diveMultiplier, diveDescel, diveTimerMax, diveTimer, diveTrailTimerMax, diveTrailTimer, diveVerticalMovementTimer,
+        diveRotationTimer, diveRotationTimerMax, boxColliderSize;
     [SerializeField] private GameObject dashTrailPrefab, ballThrownPrefab, ballFlyingPrefab;
     
     private MyColor myColor;
@@ -18,17 +19,20 @@ public class Player : MonoBehaviour
     private float horizontal, vertical;
     private Transform visualChild;
     private BoxCollider boxCollider;
+    private WeatherEffects weatherEffects;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         boxCollider = GetComponent<BoxCollider>();
+        boxCollider.size = new Vector3(boxColliderSize, boxColliderSize, boxColliderSize);
         myColor = MyColor.Blank;
         visualChild = transform.Find("Visual");
         myMat = visualChild.gameObject.GetComponent<Renderer>().material;
         marker = transform.Find("Marker").gameObject;
         arrow = marker.transform.Find("Arrow").gameObject;
         marker.SetActive(false);
+        weatherEffects = GameObject.FindObjectOfType<WeatherEffects>();
     }
 
     void Update() {
@@ -75,7 +79,6 @@ public class Player : MonoBehaviour
             Vector2 longitudeAndLatitude = Utilities.GameLocationToLongitudeLatitude(transform.position.x, transform.position.z);
             WeatherInfo weatherInfo = Utilities.GetWeatherInfo(longitudeAndLatitude.x, longitudeAndLatitude.y);
             Weather weather = Utilities.GetWeatherFromWeatherInfo(weatherInfo);
-            WeatherEffects weatherEffects = GameObject.FindObjectOfType<WeatherEffects>();
             weatherEffects.SetWeather(weather);
         }
     }
@@ -100,7 +103,7 @@ public class Player : MonoBehaviour
             //descelerate over time
             movement -= movement * diveDescel * Time.fixedDeltaTime;
 
-            //grow box collider ans move it backwards as I move forward
+            //grow box collider and move it backwards as I move forward
             boxCollider.size += new Vector3(0, 0, movement.magnitude /2);
             boxCollider.center -= new Vector3(0, 0, movement.magnitude/2);
 
@@ -131,7 +134,7 @@ public class Player : MonoBehaviour
                 movement = Vector3.zero;
                 visualChild.position = transform.position;
                 visualChild.rotation = transform.rotation;
-                boxCollider.size = new Vector3(1, 1, 1);
+                boxCollider.size = new Vector3(boxColliderSize, boxColliderSize, boxColliderSize);
                 boxCollider.center = Vector3.zero;
             }
 

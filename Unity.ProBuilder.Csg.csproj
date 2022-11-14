@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C5EAA95D-CDE7-24B3-31FB-4521DF8316D5}</ProjectGuid>
+    <ProjectGuid>{5377CC76-B4A7-F4EA-0B10-69D587B8F33F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.ProBuilder.Csg</AssemblyName>

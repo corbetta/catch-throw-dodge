@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{9D5B1002-B5EA-D291-7C41-AF04EB0EB442}</ProjectGuid>
+    <ProjectGuid>{4385DF89-9EDA-380A-3EE6-09C4CE96A88E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -59,15 +59,15 @@
     <Compile Include="Assets\Scripts\Trail.cs" />
     <Compile Include="Assets\Scripts\BallFlying.cs" />
     <Compile Include="Assets\Scripts\WeatherInfo.cs" />
+    <Compile Include="Assets\Scripts\WeatherEffects.cs" />
+    <Compile Include="Assets\EnvironmentWeatherEffect\Scripts\fxController.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
     <Compile Include="Assets\Scripts\BallThrown.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\EnvironmentWeatherEffect\Scripts\rotateCamera.cs" />
     <Compile Include="Assets\Scripts\Goal.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Utilities.cs" />
-    <Compile Include="Assets\EnvironmentWeatherEffect\Scripts\rotateCamera.cs" />
-    <Compile Include="Assets\EnvironmentWeatherEffect\Scripts\fxController.cs" />
-    <Compile Include="Assets\Scripts\WeatherEffects.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Notes\TODO.txt" />
@@ -649,51 +649,51 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{078C0D68-C737-1F37-5885-B8597A5C35F9}</Project>
+      <Project>{91CE7BCE-167B-2982-7D35-00CD35ECAF01}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
-      <Project>{A3D2AE26-9D37-28B1-CCE8-6008681B429C}</Project>
+      <Project>{C2AFBFD6-D282-47C5-E912-5F9E3B0F90BE}</Project>
       <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{63F2E4E9-A05D-AD9E-0EB7-C6BC07CDA196}</Project>
+      <Project>{1994D774-B038-7E63-FF84-AB1029C642B5}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{9354EF16-5224-4B35-41DF-4D1452D6545B}</Project>
+      <Project>{812AE230-F9CF-DC22-8616-14249BA8B6C3}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.AddOns.Editor.csproj">
-      <Project>{64032FEB-3E2D-B6F2-971E-8DF2B63CE78C}</Project>
+      <Project>{F079586A-2AE6-BBEE-263E-0AC5FBB5C727}</Project>
       <Name>Unity.ProBuilder.AddOns.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{46BD4BBC-7927-ED05-A616-E41311A60CD9}</Project>
+      <Project>{0AB281A0-869C-92D2-3816-6E42978E035D}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{91D454D7-3EE3-0B16-D2E4-FD6CE4071108}</Project>
+      <Project>{18E0DB53-F843-6052-E58D-86D3FE529720}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{9DF3164E-97EB-23A6-2F57-A70EB6CCB031}</Project>
+      <Project>{78F6002B-F2ED-7D49-AD73-D6203F687028}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.csproj">
-      <Project>{41CC6DD5-8265-1FB2-F3DC-870F96995978}</Project>
+      <Project>{C103B809-3149-07DA-5A12-5F1361A070B4}</Project>
       <Name>Unity.ProBuilder</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.Editor.csproj">
-      <Project>{27E92C3F-B4F5-07AD-198F-D89F8555595A}</Project>
+      <Project>{B193BE20-FE45-C2CE-F793-F4525F0BE041}</Project>
       <Name>Unity.ProBuilder.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
-      <Project>{D7EAC100-CC3D-5CFE-8307-22F5C9B9EC9A}</Project>
+      <Project>{9F96976C-0C66-C22A-7E14-EF924451D30F}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{3BDF1860-D48D-ACBB-6B7F-D5177F2DDE03}</Project>
+      <Project>{56494C60-1F37-AFCA-A07A-ED1F8388F96D}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
   </ItemGroup>

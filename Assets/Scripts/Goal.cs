@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
+    [SerializeField] bool moving;
     [SerializeField] private MyColor myColor;
-    private bool flashing, moving, movingDown;
+    private bool flashing, movingDown;
     private float defaultPosY;
     private float halfMapSize = 21;
+    private WeatherEffects weatherEffects;
 
     void Start() {
+        weatherEffects = GameObject.FindObjectOfType<WeatherEffects>();
         defaultPosY = transform.position.y;
         movingDown = true;
         Material myMat = GetComponent<Renderer>().material;
@@ -50,7 +53,7 @@ public class Goal : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.GetComponent<BallThrown>()) {
             if (myColor == other.gameObject.GetComponent<BallThrown>().myColor) {
-                GameManager.Instance.points++;
+                GameManager.Instance.AddPoints(1);
                 moving = true;
                 ChangeWeather();
             }
@@ -65,7 +68,6 @@ public class Goal : MonoBehaviour
         Vector2 longitudeAndLatitude = Utilities.GameLocationToLongitudeLatitude(transform.position.x, transform.position.z);
         WeatherInfo weatherInfo = Utilities.GetWeatherInfo(longitudeAndLatitude.x, longitudeAndLatitude.y);
         Weather weather = Utilities.GetWeatherFromWeatherInfo(weatherInfo);
-        WeatherEffects weatherEffects = GameObject.FindObjectOfType<WeatherEffects>();
         weatherEffects.SetWeather(weather);
     }
 }

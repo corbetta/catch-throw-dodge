@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{73A2B0AD-2E00-5D2F-D29B-A53DABFA0A6E}</ProjectGuid>
+    <ProjectGuid>{5F88CA78-6CAC-DFA3-7BE1-BF31252C4374}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.ProBuilder.Stl</AssemblyName>

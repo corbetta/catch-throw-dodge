@@ -14,12 +14,10 @@ public static class Utilities
 
         //concatenate URL + latitude + longitude
         string requestURL = "https://api.open-meteo.com/v1/forecast?latitude=" + latitudeString + "&longitude=" + longitudeString + "&current_weather=true";
-
         HttpWebRequest request = (HttpWebRequest)WebRequest.Create(requestURL);
         HttpWebResponse response = (HttpWebResponse)request.GetResponse();
         StreamReader reader = new StreamReader(response.GetResponseStream());
         string jsonInfo = reader.ReadToEnd();
-        Debug.Log(jsonInfo);
         return JsonUtility.FromJson<WeatherInfo>(jsonInfo);
         //open-meteo API documentation: https://open-meteo.com/en/docs
     }
@@ -44,9 +42,6 @@ public static class Utilities
     public static Weather GetWeatherFromWeatherInfo(WeatherInfo weatherInfo) {
         
         float weatherCode = weatherInfo.current_weather.weathercode;
-
-        Debug.Log("This is the weather code: " + weatherCode);
-
         //check for three weather conditions - cloudy, raining, or snowing
         if (weatherCode > 1 && weatherCode < 50) {
             return Weather.Cloudy;
